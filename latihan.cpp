@@ -1,6 +1,6 @@
 /*Nama : Sri Sukmawati
-NPM : 140810250059
-kelas case*/
+NPM : 14****250059
+kelas c*/
 
 //Program pertama = Faktorial
 //15:00
@@ -136,4 +136,5 @@ int main() {
     cin >> n;
     cout << "angka ganjil : ";
     cetakganjil(n);
+
 }
