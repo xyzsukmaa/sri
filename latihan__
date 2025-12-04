@@ -1,0 +1,80 @@
+/*
+Nama Program : Analisis statistik
+Nama         : Sri Sukmawati
+NPM          : 
+Tanggal Buat : 
+Deskripsi    : program cepat untuk menghitung rata-rata (mean) dan nilai tengah (median) dari sekumpulan data.
+
+
+*/
+
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+
+  int jumlahDigit, i, j;
+  float arr[100];
+  float total, rata2, median;
+
+
+  cin >> jumlahDigit;
+
+  for(int i = 0; i < jumlahDigit; i++){
+    cin >> arr[i];
+  }
+
+
+  for (int i = 0; i < jumlahDigit - 1; i++) 
+  {
+    for (int j = 0; j < jumlahDigit - i - 1; j++)
+    {
+      if (arr[j] > arr[j + 1]) 
+      {
+        float temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+ 
+       
+  cout << endl;
+  cout << "Data Terurut: [";
+  for (int i = 0; i < jumlahDigit; i++) 
+  {
+    cout << arr[i];
+    if (i < jumlahDigit - 1)
+    { 
+      cout << ", ";
+    }
+  }
+    cout << "]" << endl;
+
+  total = 0;
+  for(int i = 0; i < jumlahDigit; i++)
+  {
+    total = total + arr[i];
+  }
+
+
+  rata2 = (total/jumlahDigit);
+  cout << fixed << setprecision(2) << "Rata-rata (Mean): " << rata2 << endl;
+
+  if (jumlahDigit % 2 == 0)
+  {
+        median = (arr[jumlahDigit / 2 - 1] + arr[jumlahDigit / 2]) / 2;
+  }else 
+        {
+        median = arr[jumlahDigit/2];
+        }
+
+  cout  << fixed << setprecision(1) << "Median: " << median << endl;
+        
+  
+ return 0;
+
+}
