@@ -1,0 +1,32 @@
+#include <iostream>
+    using namespace std;
+
+    double toCelsius(double f) {
+        return ((f - 32) / 1.8);
+    }
+    void toFahrenheit(double c){
+        double f = (1.8 * c) + 32;
+        cout << "Fahrenheit = " << f << endl;
+    }
+    void toKelvin(double c){
+        double k = c + 273.15;
+        cout << "Kelvin = " << k << endl;
+    }
+
+    int main(){
+        int nilaiSuhu;
+        char jenisSuhu;
+        cout << "masukkan nilai suhu dan masukkan jenis input suhu (C / F)" << endl;
+        cin >> nilaiSuhu >> jenisSuhu;
+
+        if(jenisSuhu == 'c' || jenisSuhu == 'C'){
+           toFahrenheit(nilaiSuhu);
+           toKelvin(nilaiSuhu);
+        } else if(jenisSuhu == 'F' || jenisSuhu == 'f'){
+            double c = toCelsius(nilaiSuhu);
+            cout << "Celsius: " << c << endl;
+            toKelvin(c);
+        }
+
+        return 0;
+    }
