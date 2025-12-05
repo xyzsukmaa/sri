@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int hitung(int m, int n){
+    int hasilBagi = n / m;
+    return hasilBagi;
+}
+
+int hitungMod(int m, int n){
+      //int sisaBagi = n - (m*hitung(m,n)); 
+      int sisa = n % m;
+      return sisa;
+}
+
+int main(){
+    int m;
+    int n;
+    cout << "Masukkan total bebek pak dengklek: " << endl;
+    cin >> n;
+    cout << "Masukkan total teman pak dengklek: " << endl;
+    cin >> m;
+
+    cout << "Masing-masing teman pak dengklek masing-masing dapat " << hitung(m,n);
+    cout << endl;
+    cout << "bersisa " << hitungMod(m,n);
+}
