@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+float luas(int r){
+    float phi = 3.14;
+    float luas_pizza = r * r * phi;
+    return luas_pizza;
+}
+
+int main(){
+    int r;
+    cout << "masukkan jari-jari ";
+    cin >> r;
+
+    cout << luas(r);
+    return 0;
+
+}
