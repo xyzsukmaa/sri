@@ -1,0 +1,59 @@
+/*Nama program : 
+    Nama: Sri Sukmawati
+    NPM : 
+    Deskripsi: Program menu
+*/
+
+
+
+#include <iostream>
+using namespace std;
+
+void menu(){
+    cout << "========= AVIARY =========" << endl;
+    cout << "1. Kopi Hitam " << "(Rp 10.000)" << endl;
+    cout << "2. Kopi Susu  " << "(Rp 12.000)" << endl;
+    cout << "3. Selesai & Bayar" << endl;
+    cout << "==========================" << endl;}
+
+int total(int a, int b){
+    int jumlah = a * 10000 + b * 12000;
+    return jumlah;
+
+}
+
+int kembalian(int u, int jumlah){
+    int hasil = u - jumlah;
+    return hasil;
+}
+
+
+    int main(){
+        using namespace std;
+        menu();
+
+        int a = 0;
+        int b = 0;
+        int n;
+        int u;
+        int jumlah;
+        
+        do {
+            cout << "Masukkan pilihan menu: ";
+            cin >> n;
+
+            if(n == 1){
+                a++;
+            }
+            if(n == 2){
+                b++;
+            }
+            if(n == 3){
+                jumlah = total(a,b);
+                cout << "Jumlah uang yang dibayarkan: "<< endl;
+                cin >> u;
+                cout << "Total belanja Anda: Rp " << jumlah << "." << endl;
+                cout << "Terima kasih! Kembalian Anda: Rp " << kembalian(u, jumlah) << "." <<endl;
+            }
+        } while (n < 3 && n > 0);
+    }
