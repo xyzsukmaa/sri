@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int usia(int u, int m)
+{   
+    u = u + m;
+    return u;
+      
+}
+
+int main(){
+    int m, u;
+    cout << "Masukkan usia anda saat ini\n";
+    cin >> u;
+    cout << "Masukkan berapa tahun ke depan yang ingin anda prediksi: ";
+    cin >> m;
+    cout << "Usia anda " << m << " tahun ke depan adalah " << usia(u, m);
+
+
+}
