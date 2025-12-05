@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int total(int h){
+    int total_harga = h + (h *11)/100.00;
+    return total_harga;
+}
+int kembalian(int h, int  u){
+    int kembalian = u - total(h);
+    return kembalian;
+}
+
+int main(){
+    int h, u;
+    cout << "Masukkan harga barang: " << endl;
+    cin >> h;
+    cout << "Masukkan uang yang di bayarkan: \n";
+    cin >> u;
+    cout << "Total belanja " << total(h) << endl;
+    cout << "Kembalian " << kembalian(h, u) << endl;
+}
