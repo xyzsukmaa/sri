@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int hitungKeliling(int p, int l){
+    int keliling = 2 * (p + l);
+    return keliling;
+}
+
+int hitungLuas(int p, int l){
+    int luas = p * l;
+    return luas;
+}
+
+int main(){
+    int p, l;
+    cout << "Masukkan panjang persegi panjang: ";
+    cin >> p;
+    cout << "Masukkan lebar persegi panjang: ";
+    cin >> l;
+    cout << "Luas persegi panjang ini adalah: " << hitungLuas(p,l) << endl;
+    cout << "Keliling dari persegi panjang ini adalah: " << hitungKeliling(p,l) << endl;
+}
