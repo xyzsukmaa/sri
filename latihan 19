@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+float hitung(float m, float c){
+    float y = 0;
+    float x = y - c / m;
+    return x;
+}
+
+int main(){
+    float m, c, x;
+    cout << "Masukkan gradien fungsi " << endl;
+    cin >> m;
+    cout << "Masukkan konstanta c " << endl;
+    cin >> c;
+
+    cout << "persamaan garis lurus y = " << m << "x + " << c << "memotong sumbu x di " << hitung(m, c) << endl;
+}
