@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int pangkat(int angka, int pangkat) {
+    int hasil = 1;
+    for(int i = 0; i < pangkat; i++) {
+        hasil = hasil * angka;
+
+    }  return hasil;
+}
+
+int main() {
+    int n;
+
+    cin >> n;
+
+    int temp = n;
+    int digit;
+    int jumlah_digit = 0;
+    
+    while(temp > 0){
+        jumlah_digit++;
+        temp = temp / 10;
+    }
+
+    temp = n;
+    int jumlah_pangkat = 0;
+
+     while (temp > 0) {
+        int digit = temp % 10;
+        int hasil = pangkat(digit, jumlah_digit);
+        jumlah_pangkat = jumlah_pangkat + hasil;
+        temp = temp / 10;
+    }
+     
+     if(jumlah_pangkat == n){
+        cout << n << " adalah Armstrong Number";
+    } else {
+        cout << n << " bukan Armstrong Number";
+    }
+   return 0;
+
+
+}
+    
+
+
+} 
