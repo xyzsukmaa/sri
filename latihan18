@@ -1,0 +1,23 @@
+/*
+#include <iostream>
+using namespace std;
+
+int pangkat(int n, int m)
+{   int hasil = 1;
+    for(int i = 0; i < m; i++){
+        hasil = hasil * n;
+    }
+    return hasil;
+}
+
+int main(){
+    int m, n;
+    cout << "Masukkan angka\n";
+    cin >> n;
+    cout << "Masukkan berapa pangkatnya\n";
+    cin >> m;
+    cout << n << " pangkat " << m << " adalah " << pangkat(n, m);
+
+    return 0;
+}
+*/
