@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int tinggi = 5 * n;
+    int lebar  = 5 * n;
+
+    for (int i = 0; i < tinggi; i++) {
+        for (int j = 0; j < lebar; j++) {
+    
+            if (i < n) {
+                cout << "*";
+            }
+            
+            else if (i >= 2*n && i < 3*n) {
+                cout << "*";
+            }
+        
+            else if (j < n || j >= lebar - n) {
+                cout << "*";
+            }
+            else {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
