@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int getMax (int a, int b, int c) {
+    int result;
+    if(a >= b && a >= c){
+      result = a;
+    } else if (b >= a && b >= c){
+        result = b;
+    } else {
+        result = c;
+    }
+
+    return result;
+}
+
+int main(){
+    cout << getMax (1, 200, 988);
+    return 0;
+}
