@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+
+
+int kalku(int a, int b, char op){
+    int result;
+if (op == '+'){
+    result = a + b;
+} else if (op == '-'){
+    result = a - b;
+} else if (op == '*'){
+    result = a * b;
+} else if (op == '/'){
+    if (b == 0){
+        cout << "\033[31mPenyebut gak boleh nol...\033[0m" << endl;
+    }
+    result = a / b;
+} else {
+    cout << "\033[31mNO NO NO! INI KALKULATOR SEDERHANA, JADI JANGAN RUMIT-RUMIT PLEASE\033[0m" << endl;
+}
+   return result;
+}
