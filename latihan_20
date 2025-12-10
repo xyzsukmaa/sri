@@ -1,0 +1,48 @@
+#include <cmath>
+//include math function
+using namespace std;
+int main() {
+    //pow = take two argument
+    //pow (2, 5) artinya 2 di pangkatin 5
+
+    cout << pow(2,5) << endl;
+
+    //sqrt(36)
+    //6
+
+    cout << sqrt(36) << endl;
+
+    //bisa juga dengan angka desimal juga
+
+
+    //round()
+    //rounded normal
+
+    cout << round(4.2) << endl;
+    //4
+    cout << round(4.7) << endl;
+    //5
+
+    //ceil
+
+    cout << ceil(4.6) << endl;
+
+    //pembulatan ke atas
+    //5
+
+    //floor
+    //pembulatan ke bawah
+
+    cout << floor(4.8) << endl;
+
+    //fmax
+    //take 2 number
+    //ngasih tau us which number are bigger than other
+    
+    cout << fmax(3, 10) << endl;
+
+    //fmin
+    //angka terkecil dari yang di beri
+}
+    cout << fmin(3, 10) << endl;
+}
